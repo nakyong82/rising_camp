@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>마켓컬리 회원가입</title>
+  <link rel="stylesheet" href="./login.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap');
+
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="top_container">
+      <div class="top_text">
+        <span>지금 가입하고 인기상품 100원에 받아가세요!</span>
+        <span><img src="https://res.kurly.com/pc/ico/1908/ico_arrow_fff_84x84.png" alt="화살표" width="42px"></span>
+      </div>
+      <button id="top_delete_button">
+        <img src="https://res.kurly.com/pc/ico/1908/ico_close_fff_84x84.png" alt="삭제버튼" width="42px">
+      </button>
+    </div>
+    <div class="top_menu_container">
+      <div class="top_menu_img">
+        <img src="https://res.kurly.com/pc/service/common/2011/delivery_210801.png" alt="샛별, 택배 배송안내" width="121px">
+      </div>
+      <div class="top_menu_box">
+        <div class="top_menu_1">회원가입</div>
+        <div class="top_menu_bar"></div>
+        <div class="top_menu_2">로그인</div>
+        <div class="top_menu_bar"></div>
+        <div class="top_menu_3">고객센터</div>
+        <div id="top_menu_tri">&#9660
+          <ul id="top_menu_drop">
+            <li>공지사항</li>
+            <li>자주하는 질문</li>
+            <li>1:1 문의</li>
+            <li>대량주문 문의</li>
+            <li>상품 제안</li>
+            <li>에코포장 피드백</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="logo_container">
+      <img id="logo" src="	https://res.kurly.com/images/marketkurly/logo/logo_x2.png" alt="마켓컬리 로고" width="103px">
+    </div>
+  </div>
+  <div class="main_menu_container">
+    <div class="main_menu">
+      <div id="category">
+        <img class="category_icon" src="https://res.kurly.com/pc/service/common/1908/ico_gnb_all_off_x2.png" alt="메뉴" width="14px">
+        <span class="category_text">전체 카테고리</span>
+        <div>
+          <ul class="category_drop">
+            <li>
+              <span class="category_drop_img"><img src="https://img-cf.kurly.com/shop/data/category/icon_veggies_inactive_pc@2x.1586324570.png" alt="전체 카테고리" width="24px" height="24px"></span>
+              <span class="category_drop_text">채소</span>
+            </li>
+            <li>
+              <span class="category_drop_img"><img src="https://img-cf.kurly.com/shop/data/category/icon_fruit_inactive_pc@2x.1568684150.png" alt="전체 카테고리" width="24px" height="24px"></span>
+              <span class="category_drop_text">과일·견과·쌀</span>
+            </li>
+            <li>
+              <span class="category_drop_img"><img src="	https://img-cf.kurly.com/shop/data/category/icon_seafood_inactive_pc@2x.1568684352.png" alt="전체 카테고리" width="24px" height="24px"></span>
+              <span class="category_drop_text">수산·해산·건어물</span>
+            </li>
+            <li>
+              <span class="category_drop_img"><img src="https://img-cf.kurly.com/shop/data/category/icon_meat_inactive_pc@2x.1568684452.png" alt="전체 카테고리" width="24px" height="24px"></span>
+              <span class="category_drop_text">정육·계란</span>
+            </li>
+            <li>
+              <span class="category_drop_img"><img src=	"https://img-cf.kurly.com/shop/data/category/icon_side_inactive_pc@2x.1572243579.png" alt="전체 카테고리" width="24px" height="24px"></span>
+              <span class="category_drop_text">국·반찬·메인요리</span>
+            </li>
+            <ul class="category_sub_drop">
+              <li>
+                <span class="category_sub_drop_text">친환경</span>
+              </li>
+              <li>
+                <span class="category_sub_drop_text">고구마</span>
+              </li>
+              <li>
+                <span class="category_sub_drop_text">시금치</span>
+              </li>
+              <li>
+                <span class="category_sub_drop_text">브로콜리</span>
+              </li>
+              <li>
+                <span class="category_sub_drop_text">양파</span>
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main_menu">신상품</div>
+    <div class="main_menu">베스트</div>
+    <div class="main_menu">알뜰쇼핑</div>
+    <div class="main_menu">특가/혜택</div>
+    <div class="main_search">
+      <input type="text" id="search" placeholder="검색어를 입력해주세요.">
+      <input type="image" src="https://res.kurly.com/pc/service/common/1908/ico_search_x2.png" class="search_button" width="30px" height="30px">
+    </div>
+    <div class="main_button_container">
+      <button class="main_button">
+        <img id="location_img"src="https://res.kurly.com/pc/ico/2008/ico_delivery_setting.svg?ver=1" alt="위치버튼" width="36px">
+      </button>
+      <button class="main_button"><img src="https://res.kurly.com/pc/service/pick/btn-heart-off.svg" alt="하트버튼" width="36px"></button>
+      <button class="main_button"><img src="https://res.kurly.com/pc/service/common/2011/ico_cart.svg" alt="카트버튼" width="36px"></button>
+      <div class="location_container">
+        <div class="location_text">
+          <span>배송지를 등록</span>하고 <br> 구매 가능한 상품을 확인하세요! 
+        </div>
+        <div class="location_button_container">
+          <button class="location_login_button">로그인</button>
+          <button class="location_search_button"><span><img src="https://res.kurly.com/pc/ico/2008/ico_search_40x40.png" alt="검색" width="20px" height="20px"></span>주소검색</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header_title_container">
+    <h2 class="header_title">회원가입</h2>
+  </div>
+  <div class="content_container">
+    <div class="content">
+      <form>
+        <div class="content_title_container">
+          <span class="content_title"><span class="star_icon">*</span>필수입력사항</span>
+        </div>
+        <table>
+          <tr>
+            <th class="table_title">아이디<span class="table_star_icon">*</span></th>
+            <td class="table_content">
+              <input class="table_input" type="text" id="id" required placeholder="6자 이상의 영문 혹은 영문과 숫자를 조합">
+               <button class="check_button">중복확인</button>
+            </td>
+          </tr>
+          <tr>
+            <th class="table_title">비밀번호<span class="table_star_icon">*</span></th>
+            <td class="table_content">
+              <input class="table_input" type="password" id="password1" required placeholder="비밀번호를 입력해주세요.">
+            </td>
+           </tr>
+          <tr>
+            <th class="table_title">비밀번호확인<span class="table_star_icon">*</span></th>
+            <td class="table_content">
+              <input class="table_input" type="password" id="password2" required placeholder="비밀번호를 한번 더 입력해주세요.">
+            </td>
+          </tr>
+          <tr>
+            <th class="table_title">이름<span class="table_star_icon">*</span></th>
+            <td class="table_content">
+              <input class="table_input" type="text" id="name" required placeholder="이름을 입력해주세요.">
+            </td>
+          </tr>
+          <tr>
+            <th class="table_title">이메일<span class="table_star_icon">*</span></th>
+            <td class="table_content">
+              <input class="table_input" type="email" id="mail" required placeholder="예:marketkurly@kurly.com">
+              <button class="check_button">중복확인</button>
+            </td>
+          </tr>
+          <tr>
+            <th class="table_title">휴대폰<span class="table_star_icon">*</span></th>
+            <td class="table_content">
+              <input class="table_input" type="tel" id="phone" required placeholder="숫자만 입력해주세요">
+              <button class="check_button" id="check_phone_button">인증번호 받기</button>
+            </td>
+          </tr>
+          <tr>
+            <th class="table_title">주소<span class="table_star_icon">*</span></th>
+            <td class="table_content">
+              <button class="check_button" id="check_address_button"><span><img src="	https://res.kurly.com/pc/service/common/2006/ico_search.svg" alt="검색"></span>주소확인</button>
+              <div class="table_explain">배송지에 따라 상품 정보가 달라질 수 있습니다.</div>
+            </td>
+          </tr>
+          <tr>
+            <th class="table_title">성별</th>
+            <td class="table_content">
+              <input class="table_radio_button" type="radio" name="gender" id="gender_m">
+              <label class="table_radio" for="gender_m">남자</label>
+              <input class="table_radio_button" type="radio" name="gender" id="gender_w">
+              <label class="table_radio" for="gender_w">여자</label>
+              <input class="table_radio_button" type="radio" name="gender" id="gender_x" checked>
+              <label class="table_radio" for="gender_x">선택안함</label>
+            </td>
+          </tr>
+          <tr>
+            <th class="table_title">생년월일</th>
+            <td class="table_content">
+              <div class="table_birthday">
+                <input class="birthday_input" type="text" id="year" required placeholder="YYYY">
+                <span class="birthday_bar">/</span>
+                <input class="birthday_input" type="text" id="month" required placeholder="MM">
+                <span class="birthday_bar">/</span>
+                <input class="birthday_input" type="text" id="date" required placeholder="DD">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th class="table_title">추가입력사항</th>
+            <td class="table_content">
+              <input class="table_radio_button" type="radio" name="event" id="event_id">
+              <label class="table_radio" for="gender_m">추천인 아이디</label>
+              <input class="table_radio_button" type="radio" name="event" id="event_name">
+              <label class="table_radio" for="gender_w">참여 이벤트명</label>
+            </td>
+          </tr>
+          <tr id="last_table">
+            <th rowspan="6" class="table_title">이용약관동의<span class="table_star_icon">*</span></th>
+            <td class="table_agree_container">
+              <div class="table_all_agree">
+                <input type="checkbox" id="agree_all">
+                <label for="agree_all">전체 동의합니다.</label>
+                <p class="table_agree_explain">선택항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다.</p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="table_one_agree">
+                <input type="checkbox" id="agree_1">
+                <label for="agree_1">이용약관 동의<span class="checkbox_explain"> (필수)</span></label>
+                <span class="agree_detail">약관보기></span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="table_one_agree">
+                <input type="checkbox" id="agree_2">
+                <label for="agree_2">개인정보 수집&#8231이용 동의<span class="checkbox_explain"> (필수)</span></label>
+                <span class="agree_detail">약관보기></span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="table_one_agree">
+                <input type="checkbox" id="agree_3">
+                <label for="agree_3">개인정보 수집&#8231이용 동의<span class="checkbox_explain"> (선택)</span></label>
+                <span class="agree_detail">약관보기></span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div id="table_sns_agree">
+                <input type="checkbox" id="agree_4">
+                <label for="agree_4">무료배송,할인쿠폰 등 혜택/정보 수신 동의<span class="checkbox_explain"> (선택)</span></label>
+                <div class="agree_message_container">
+                  <input type="checkbox" id="agree_sms">
+                  <label for="agree_sms">SMS<span class="checkbox_explain"> (선택)</span></label>
+                  <input type="checkbox" id="agree_mail">
+                  <label for="agree_mail">이메일</label><span class="checkbox_explain"> (선택)</span></label>
+                </div>
+                <div id="agree_sns_explain"> 
+                  <span id="agree_plus_n">ㄴ</span> 동의 시 한 달간 [5% 적립] + [무제한 무료배송]
+                  <span id="agree_sns_detail">(첫 주문 후 적용)</span> 
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="table_one_agree">
+                <input type="checkbox" id="agree_5">
+                <label for="agree_5">본인은 만 14세 이상입니다.<span class="checkbox_explain"> (필수)</span></label>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="button_container">
+          <button id="submit_button">가입하기</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="inner_footer_container">
+      <div class="inner_footer">
+        <h2 id="inner_footer_title">고객행복센터</h2>
+        <div class="inner_footer_call_container">
+          <div class="inner_footer_call">1644-1107</div>
+          <div class="inner_footer_call_inform">
+            <div class="inner_footer_call_name">365고객센터</div>
+            <div class="inner_footer_call_time">오전 7시~오후 7시</div>
+          </div>
+        </div>
+        <div class="inner_footer_call_container">
+          <div class="inner_footer_sns">카카오톡 문의</div>
+          <div class="inner_footer_call_inform">
+            <div class="inner_footer_call_name">365고객센터</div>
+            <div class="inner_footer_call_time">오전 7시~오후 7시</div>
+          </div>
+        </div>
+        <div class="inner_footer_call_container">
+          <div class="inner_footer_sns">1:1 문의</div>
+          <div class="inner_footer_call_inform">
+            <div class="inner_footer_call_name">24시간 접수 가능</div>
+            <div class="inner_footer_call_time">고객센터 운영시간에 순차적으로 답변해드리겠습니다.</div>
+          </div>
+        </div>
+        <div class="inner_footer_call_container">
+          <div class="inner_footer_sns">대량주문 문의</div>
+          <div class="inner_footer_call_inform">
+            <div id="inner_footer_mail">비회원의 경우 메일로 문의 바랍니다.</div>
+          </div>
+        </div>
+      </div>
+      <div class="inner_footer">
+        <ul class="inner_footer_list_container">
+          <li class="inner_footer_list">컬리소개</li>
+          <li class="inner_footer_list">컬리소개영상</li>
+          <li class="inner_footer_list">인재채용</li>
+          <li class="inner_footer_list">이용약관</li>
+          <li class="inner_footer_list">개인정보처리방침</li>
+          <li class="inner_footer_list">이용안내</li>
+        </ul>
+        <div id="inner_footer_company_inform">
+          법인명 (상호):주식회사 컬리 I 사업자등록번호:261-81-23567 <span class="inner_footer_inform_link">사업자정보 확인</span><br>
+          통신판매업: 제 2018-서울강남-01646호 I 개인정보보호책임자:이원준 <br>
+          주소:서울특별시 강남구 테헤란로 133, 18층(역삼동) I 대표이사:김슬아 <br>
+          입점문의: <span class="inner_footer_inform_link">입점문의하기</span> I 마케팅제휴: <span class="inner_footer_inform_link">business@kurlycorp.com</span><br>
+          채용문의: <span class="inner_footer_inform_link">recruit@kurlycorp.com</span><br>
+          팩스:070-7500-6098 I 이메일: <span class="inner_footer_inform_link">help@kurlycorp.com</span><br>
+          대량주문 문의: <span class="inner_footer_inform_link">kurlygift@kurlycorp.com</span>
+        </div>
+        <ul class="inner_footer_icon_container">
+          <li class="inner_footer_icon"><img src="https://res.kurly.com/pc/ico/1810/ico_instagram.png" alt="인스타" width="30px"></li>
+          <li class="inner_footer_icon"><img src="https://res.kurly.com/pc/ico/1810/ico_fb.png" alt="페이스북"  width="30px"></li>
+          <li class="inner_footer_icon"><img src="https://res.kurly.com/pc/ico/1810/ico_blog.png" alt="블로그"  width="30px"></li>
+          <li class="inner_footer_icon"><img src="https://res.kurly.com/pc/ico/1810/ico_naverpost.png" alt="네이버포스트"  width="30px"></li>
+          <li class="inner_footer_icon"><img src="https://res.kurly.com/pc/ico/1810/ico_youtube.png" alt="유튜브"  width="30px"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer_link">
+      <div class="footer_link_container">
+        <div class="footer_link_mark">
+          <img src="https://res.kurly.com/pc/ico/2001/logo_isms.png" alt="인증마크" width="34px">
+        </div>
+        <div class="footer_link_explain">
+          [인증범위]마켓컬리 쇼핑몰 서비스 개발&#8231운영<br>
+          [유효기간]2019.04.01~2022.03.31
+        </div>
+      </div>
+      <div class="footer_link_container">
+        <div class="footer_link_mark">
+          <img src="https://res.kurly.com/pc/ico/2001/logo_eprivacyplus.png" alt="인증마크" width="34px">
+        </div>
+        <div class="footer_link_explain">
+          개인정보보호 우수 웹사이트&#8231<br>
+          개인정보처리시스템 인증(ePRIVACYPLUS)
+        </div>
+      </div>
+      <div class="footer_link_container">
+        <div class="footer_link_mark">
+          <img src="https://res.kurly.com/pc/service/main/2009/logo_payments.png" alt="토스로고" width="102px">
+        </div>
+        <div class="footer_link_explain">
+          고객님의 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한<br>
+          토스 페이먼츠 구매안전(에스크로) 서비스를 이용하실 수 있습니다.
+        </div>
+      </div>
+    </div>
+    <div class="last_footer">
+      <div class="last_footer_text">마켓컬리에서 판매되는 상품 중에는 마켓컬리에 입점한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.</div>
+      <div class="last_footer_text">마켓플레이스(오픈마켓) 상품의 경우 컬리는 통신판매중개자로서 통신판매의 당사자가 아닙니다. 컬리는 해당 상품의 주문, 품질, 교환/환불 등 의무와 책임을 부담하지 않습니다.</div>
+      <div class="last_footer_logo">© KURLY CORP. ALL RIGHTS RESERVED</div>
+    </div>
+  </div>
+  <div class="fixed_container">
+    <div class="fixed_image_container">
+      <img src="https://res.kurly.com/pc/service/main/1904/bnr_quick_20190403.png" alt="고정배너" width="80px">
+    </div>
+    <div class="fixed_menu_container">
+      <div class="fixed_menu">등급별 혜택</div>
+      <div class="fixed_menu">레시피</div>
+      <div class="fixed_menu">베스트 후기</div>
+    </div>
+  </div>
+  <script src="./login.js"></script>
+</body>
+</html>
